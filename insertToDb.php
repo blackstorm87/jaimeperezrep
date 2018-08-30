@@ -81,11 +81,11 @@
 		// Build SQL query to insert new expense data into SQL database
 		$tsql=
 		"INSERT INTO parking (	
-				Make,
-				Model,
-				StartDate,
-				EndDate,
-				EmployeeName)
+				vehMake,
+				vehModel,
+				startDate,
+				endDate,
+				employeeName)
 		VALUES ('" . $Make . "',, 
 				'" . $Model . "',
 				'" . $StartDate . "', 

@@ -55,7 +55,7 @@
 
 <div class="intro">
 
-	<h2> Input Expense Form </h2>
+	<h2> Las Colinas Visitor Check-In </h2>
 
 	<!-- Display redundant error message on top of webpage if there is an error -->
 	<h3> <span class="error"> <?php echo $prevSelections['errorMessage'] ?> </span> </h3>
