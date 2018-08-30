@@ -92,6 +92,8 @@
 				'" . $EndDate . "', 
 				'" . $EmployeeName . "')";
 
+		echo $tsql;
+
 		// Run query
 		$sqlQueryStatus= sqlsrv_query($conn, $tsql);
 
