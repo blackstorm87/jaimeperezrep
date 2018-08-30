@@ -86,7 +86,7 @@
 				startDate,
 				endDate,
 				employeeName)
-		VALUES ('" . $Make . "',, 
+		VALUES ('" . $Make . "', 
 				'" . $Model . "',
 				'" . $StartDate . "', 
 				'" . $EndDate . "', 
