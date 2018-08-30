@@ -69,19 +69,19 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 	<form action="insertToDb.php" method="post">
 
 		<label>Make:</label>
-		<input type="text" name="make" required>
+		<input type="text" name="vehMake" required>
 
 		<label>Model:</label>
-		<input type="text" name="model" required>
+		<input type="text" name="vehModel" required>
 
 		<label>Start Date:</label>
-		<input type="number" name="start_date" required>
+		<input type="number" name="startDate" required>
 
 		<label>End Date:</label>
-		<input type="number" name="end_date" required>
+		<input type="number" name="endDate" required>
 
 		<label>Employee Name (First Last):</label>
-		<input type="text" name="employee_name" required>
+		<input type="text" name="employeeName" required>
 
 		<button type="submit">Submit</button>
 	</form>
