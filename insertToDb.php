@@ -80,7 +80,7 @@
 
 		// Build SQL query to insert new expense data into SQL database
 		$tsql=
-		"INSERT INTO parking (	
+		"INSERT INTO parking2 (	
 				vehMake,
 				vehModel,
 				startDate,
