@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title> 
-		Carlos' Expense Input Tool 
+		Las Colinas Visitor Check-in
 	</title>
 
 
@@ -49,8 +49,8 @@
 	}
 
 	// Extract previously-selected Month and Year
-	$prevExpenseMonth= $prevSelections['prevExpenseMonth'];
-	$prevExpenseYear= $prevSelections['prevExpenseYear'];
+	$prevStartDate= $prevSelections['prevStartDate'];
+	$prevEndDate= $prevSelections['prevEndDate'];
 ?>
 
 <div class="intro">
@@ -68,54 +68,31 @@ The PHP script insertToDb.php will be executed after the user clicks "Submit"-->
 <div class="container">
 	<form action="insertToDb.php" method="post">
 
-		<label>Expense Day (1-31):</label>
-		<input type="number" step="1" name="expense_day" required>
+		<label>Make:</label>
+		<input type="text" name="make" required>
 
-		<!-- Dropdown menu for expense month, remembering previously selected month -->
-		<label>Expense Month</label>
-		<select name="expense_month">
-			<option value="-1">Month:</option>
-			<option value="01"<?php echo $prevExpenseMonth == 1 ? 'selected="selected"' : ''; ?>>Jan</option>
-			<option value="02"<?php echo $prevExpenseMonth == 2 ? 'selected="selected"' : ''; ?>>Feb</option>
-			<option value="03"<?php echo $prevExpenseMonth == 3 ? 'selected="selected"' : ''; ?>>Mar</option>
-			<option value="04"<?php echo $prevExpenseMonth == 4 ? 'selected="selected"' : ''; ?>>Apr</option>
-			<option value="05"<?php echo $prevExpenseMonth == 5 ? 'selected="selected"' : ''; ?>>May</option>
-			<option value="06"<?php echo $prevExpenseMonth == 6 ? 'selected="selected"' : ''; ?>>Jun</option>
-			<option value="07"<?php echo $prevExpenseMonth == 7 ? 'selected="selected"' : ''; ?>>Jul</option>
-			<option value="08"<?php echo $prevExpenseMonth == 8 ? 'selected="selected"' : ''; ?>>Aug</option>
-			<option value="09"<?php echo $prevExpenseMonth == 9 ? 'selected="selected"' : ''; ?>>Sep</option>
-			<option value="10"<?php echo $prevExpenseMonth == 10 ? 'selected="selected"' : ''; ?>>Oct</option>
-			<option value="11"<?php echo $prevExpenseMonth == 11 ? 'selected="selected"' : ''; ?>>Nov</option>
-			<option value="12"<?php echo $prevExpenseMonth == 12 ? 'selected="selected"' : ''; ?>>Dec</option>
-		</select><br>
+		<label>Model:</label>
+		<input type="text" name="model" required>
 
-		<!-- Text input for year, remembering previously selected year -->
-		<label>Expense Year (YYYY):</label>
-		<input type="number" step="1" name="expense_year" value="<?php echo $prevExpenseYear;  ?>" required><br>
- 
-		<label>Expense Amount (US$):</label>
-		<input type="number" step="0.01" name="expense_amount" required><br>
+		<label>Start Date:</label>
+		<input type="number" name="start_date" required>
 
-		<label>Expense Category:</label>
-		<select name="expense_category">
-			<option value="-1">Category:</option>
-			<?php echo " . $options . " ?>
-		</select><br>
+		<label>End Date:</label>
+		<input type="number" name="end_date" required>
 
-		<label>Notes (optional) [no accents or tildes]:</label>
-		<input type="text" name="input_note" ><br>
+		<label>Employee Name (First Last):</label>
+		<input type="text" name="employee_name" required>
 
 		<button type="submit">Submit</button>
 	</form>
 </div>
 
 <h3> Previous Input (if any) - for verification purposes:</h3>
-<p> Expense Day: <?php echo $prevSelections['prevExpenseDay'] ?> </p>
-<p> Expense Month: <?php echo $prevSelections['prevExpenseMonth'] ?> </p>
-<p> Expense Year: <?php echo $prevSelections['prevExpenseYear'] ?> </p>
-<p> Expense Category: <?php echo $prevSelections['prevExpenseCategory'] ?> </p>
-<p> Expense Amount: <?php echo $prevSelections['prevExpenseAmount'] ?> </p>
-<p> Expense Note: <?php echo $prevSelections['prevExpenseNote'] ?> </p>
+<p> Previous Make: <?php echo $prevSelections['prevMake'] ?> </p>
+<p> Previous Model: <?php echo $prevSelections['prevModel'] ?> </p>
+<p> Previous Start Date: <?php echo $prevSelections['prevStartDate'] ?> </p>
+<p> Previous End Date: <?php echo $prevSelections['prevEndDate'] ?> </p>
+<p> Previous Employee Name: <?php echo $prevSelections['prevEmployeeName'] ?> </p>
 <p> <span class="error"> <?php echo $prevSelections['errorMessage'] ?> </span> </p>
 
 </body>
