@@ -115,6 +115,6 @@
 	// Store previously-selected data as part of info to carry over after URL redirection
 	$_SESSION['prevSelections'] = $prevSelections;
 
-	// /* Redirect browser to home page */
-	// header("Location: /"); 
+	/* Redirect browser to home page */
+	header("Location: /"); 
 ?>
